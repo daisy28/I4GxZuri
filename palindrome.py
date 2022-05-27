@@ -4,13 +4,15 @@
 # find_anagrams("racecar") --> True
 
 
-string = input("Enter a word: ")
-string = string.casefold()
+def find_anagram(str1, str2):
+    str1 = "listen"
+    str2 = "silent"
     
-reversed_string = reversed(string)
-if list(string) == list(reversed_string):
-    print(string)
-    print("TRUE!")
-else:
-    print(string)
-    print("FALSE!")
+    str_anagram = sorted(str1)
+    str2_anagram = sorted(str2)
+
+    if(str_anagram == str2_anagram):
+        return True
+    else:
+        return False
+    print(find_anagram("listen", "silent"))
